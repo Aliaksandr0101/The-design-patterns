@@ -3,30 +3,36 @@ import java.util.List;
 
 public class AnimalTwo {
     private void makeSound() {
-        
+
     }
 }
-class Lion extends AnimalTwo{
+
+class Lion extends AnimalTwo {
     private String makeSound() {
         return "roar";
     }
 }
-class Mouse extends AnimalTwo{
+
+class Mouse extends AnimalTwo {
     public String makeSound() {
         return "beeps";
     }
 }
-class Snake extends AnimalTwo{
+
+class Snake extends AnimalTwo {
     private String makeSound() {
         return "hisses";
     }
 }
-class AnimalTwoDB{
+
+class AnimalTwoDB {
     List<AnimalTwo> animalList = new ArrayList();
-    public void saveAnimal(AnimalTwo animal){
+
+    public void saveAnimal(AnimalTwo animal) {
         animalList.add(animal);
     }
-    public void getAnimal(int i){
+
+    public void getAnimal(int i) {
         System.out.println(animalList.get(i));
     }
 

@@ -13,12 +13,15 @@ public class Animal {
     }
 
 }
-class AnimalDB{
+
+class AnimalDB {
     List<Animal> animalList = new ArrayList();
-    public void saveAnimal(Animal animal){
-      animalList.add(animal);
+
+    public void saveAnimal(Animal animal) {
+        animalList.add(animal);
     }
-    public void getAnimal(int i){
+
+    public void getAnimal(int i) {
         System.out.println(animalList.get(i));
     }
 }
