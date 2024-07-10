@@ -2,9 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalTwo {
-    private void makeSound() {
-
-    }
+    private void makeSound() { }
 }
 
 class Lion extends AnimalTwo {
@@ -13,9 +11,14 @@ class Lion extends AnimalTwo {
     }
 }
 
-class Mouse extends AnimalTwo {
+class Mouse extends AnimalTwo implements SoundOfAnimal {
     public String makeSound() {
         return "beeps";
+    }
+
+    @Override
+    public void soundOfAnimal() {
+        System.out.println("ship-ship");
     }
 }
 
@@ -28,7 +31,7 @@ class Snake extends AnimalTwo {
 class AnimalTwoDB {
     List<AnimalTwo> animalList = new ArrayList();
 
-    public void saveAnimal(AnimalTwo animal) {
+    private void saveAnimal(AnimalTwo animal) {
         animalList.add(animal);
     }
 
@@ -42,5 +45,6 @@ class AnimalTwoDB {
         animalTwoDB.saveAnimal(mouse);
         AnimalTwo animalTwo = new AnimalTwo();
         System.out.println(mouse.makeSound());
+        mouse.soundOfAnimal();
     }
 }
