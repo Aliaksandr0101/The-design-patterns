@@ -22,9 +22,14 @@ class Mouse extends AnimalTwo implements SoundOfAnimal {
     }
 }
 
-class Snake extends AnimalTwo {
+class Snake extends AnimalTwo implements SoundOfAnimal {
     private String makeSound() {
         return "hisses";
+    }
+
+    @Override
+    public void soundOfAnimal() {
+        System.out.println("It's hiss");
     }
 }
 
